@@ -1,0 +1,62 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="section product-detail">
+    <div class="columns is-flex is-align-items-center">
+        <div class="column">
+            <a href=""></a>
+
+            <div class="box">
+                <figure class="image product-detail-image">
+                    <img src="{{ product.images.url }}">
+                </figure>
+            </div>
+        </div>
+        <div class="column">
+            <div class="content">
+                <p class="title is-size-2">
+                    {{ product.title }}
+                    {% if product.is_new %}
+                    <span class="tag is-danger">New!</span>
+                    {% endif %}
+                    {% if product.is_discounted %}
+                    <span class="tag is-primary">Discount!</span>
+                    {% endif %}
+                </p>
+                <p class="title is-size-3 has-text-black">{{ product.price }} UZS</p>
+                <p class="title is-size-5 has-text-grey-light">0 отзывов</p>
+                <p class="title">Brand: {{ product.brand }}</p>
+                <p class="title has-text-grey-light is-size-4">Наличие: Есть в наличии</p>
+                <p class="title is-size-4">
+                    Поделится:
+                    <span class="is-size-4 mx-3">
+                        <!-- <ul>
+                            <li class="rasm"><i class="fa-brands fa-youtube"></i></i></i></li>
+                            <li class="rasm"><i class="fa-brands fa-whatsapp"></i></i></i></i></li>
+                            <li class="rasm"><i class="fa-brands fa-facebook"></i></i></i></i></li>
+                            
+                        </ul> -->
+                        <a href="#">
+                            <ion-icon name="logo-whatsapp" class="order"><i class="fa-brands fa-whatsapp"
+                                    style="color:rgb(29, 219, 19);"></i></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon name="logo-youtube" class="order"><i class="fa-brands fa-youtube"
+                                    style="color:rgb(214, 31, 31);"></i></ion-icon>
+                        </a>
+                        <a href="#">
+                            <ion-icon name="logo-facebook" class="order"><i class="fa-brands fa-facebook"
+                                    style="color:rgb(29, 33, 138);"></i></ion-icon>
+                                <p><i class="fa-solid fa-eye" style="color:black ;"></i>{{product.view_set.count}}</p>
+                        </a>
+                    </span>
+                </p>
+                
+                <a href="{% url 'rate_product' product.pk %}"class="button is-black"> Leavere view</a>
+                <a href="{% url 'store' %}"class="button is-black">Back to main</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

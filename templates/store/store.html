@@ -1,0 +1,108 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+	<div class="row mx-4">
+		{% for product in products %}
+		<div class="col-lg- mx-2">
+			<a href="{% url 'product_detail' product.pk %}">
+			<img src="{{product.images.url}}">
+		</a>
+			<div class="box-element product">
+				<h6><strong>{{product.name}}</strong></h6>
+				<hr>
+
+				<button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart"><a href="{% url 'cart' %}" style="padding: 0; color: black;">+ В корзину</a></button>
+                
+				
+				<!-- <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-secondary add-btn update-cart">+ В корзину</button> -->
+				<!-- <a class="btn btn-outline-success" href="#">View</a> -->
+				<h4 style="display: inline-block">{{product.price|floatformat:2}}UZS</h4>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+
+	<footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>TERRA PRO</h4>
+                    <ul>
+                        <li><a class="a" href="#">О Компании</a></li>
+                        <li><a class="a" href="#">Карьера</a></li>
+                        <li><a class="a" href="#">Контакты</a></li>
+                        <li><a class="a" href="#">Публичная оферта</a></li>
+                        <li><a class="a" href="#">Политика конфиденциальности</a></li>
+                        <li><a class="a" href="#">Условия возврата</a></li>
+                        <li><a class="a" href="#">Условия доставки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ПОДДЕРЖКА КЛИЕНТОВ</h4>
+                    <ul>
+                        <li><a class="a" href="#">Мой аккаунт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>МАГАЗИНЫ</h4>
+                    <ul>
+                        <li><a class="a" href="#">Узбекистан</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col1">
+
+
+                    <form action="{% url 'store' %}" method="get">
+                        <div class="field has-addons mt-4 mr-2">
+                            <div class="control">
+                                <input class="input" type="search" placeholder="Find a product" name="search">
+                            </div>
+                            <div class="control">
+                                <button class="button is-info" type="submit">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <input type="text" id="footer-search" class="search-title-input" name="q" maxlength="50"
+                        autocomplete="off" placeholder="Поиск по сайту">
+                    <div class="columns">
+                        <div class="column">
+                            <ul class="first-child">
+                                <li><a><i id="i" class="fa-sharp fa-solid fa-envelope"></i>terrapro.retail@gmail.com</a>
+                                </li>
+                                <li style="margin-top: 25px;">г. Ташкент , <i id="i1" class="fas fa-map-marker-alt"></i> <a href=""></a> Яккасарайский pа 
+                                        йон, ул. Шота Руставели 150</li>
+                            </ul>
+                            <button
+                                style="margin-top: 20px;padding:35px 75px;border-radius: 3%;text-decoration: white;text-align:center;"
+                                class="button is-dark"><a href="https://t.me/xamidov_o6">s</a></button>
+                        </div>
+                        <div class="column">
+                            <ul class="second-child">
+                                <li><a style="padding-right: 1px;padding-left: 1px;"><i id="i"
+                                            class="fas fa-phone fa-flip-horizontal"></i>+998 91 830 43 43</a></li>
+                                <li style="margin-left: 25px;">Служба поддержки:<br>
+                                    С Понедельника по Субботу<br>
+                                    С 9:00 до 18:00<br>
+                                    <i class="fas fa-clock"></i>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br>
+                <div class="columns">
+                    <p style="width: 350px;margin-left: 450px;">&copy; 2023 TERRA PRO, Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+	 
+
+</div>
+{% endblock content %}

@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;800&display=swap');
+.footer{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    padding: 70px 0;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+ul{
+    list-style: none;
+}
+.footer-col{
+    width: 20%;
+    /* padding: 0 15px; */
+}
+.footer-col1{
+    width: 40%;
+    /* padding: 0 15px; */
+}
+.footer-col h4{
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col1 h4{
+    font-size: 18px;
+    color: black;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+/* .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}  */
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col1 ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col1 ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    padding: 0;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col1 ul li a:hover{
+    color: #ffffff;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+}
+#footer-search{
+    width: 100%;
+    margin: 25px 0;
+    padding: 9px 6px;
+}
+.a{
+    text-transform: capitalize;
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease;  
+}
+.footer-col1 ul{
+    padding-right: 0;
+    margin: 0;
+}
+.footer-col1 input{
+    margin-right: 20px;
+}
+#i{
+    padding-right: 10px;
+}
+#i1{
+    margin-right: 5px;
+}
+.columns {
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+    margin-top: -.75rem
+}
+.column {
+    display: block;
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: .75rem
+}
+.columns.is-variable>.column {
+    padding-left: var(--columnGap);
+    padding-right: var(--columnGap)
+}
+.columns.is-gapless>.column {
+    margin: 0;
+    padding: 0 !important
+}
